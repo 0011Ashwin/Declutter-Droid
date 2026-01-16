@@ -1,0 +1,22 @@
+.env
+__pycache__/
+*.png
+
+
+.env
+# Eniveronment variables file
+__pycache__/
+# Python cache files
+*.log
+# Log files
+*.sqlite3
+# SQLite database files
+.DS_Store
+
+# conda environment files
+env/
+*.pyc
+# Compiled Python files
+.vscode/
+# VSCode settings folder
+.idea/

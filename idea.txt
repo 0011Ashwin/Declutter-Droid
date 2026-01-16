@@ -1,0 +1,10 @@
+**Prompt for a banner image for a GitHub project named "Declutter Droid", an AI that cleans up your email inbox.**
+
+**Option 1 (Friendly Mascot):**
+"A friendly, minimalist robot mascot, 'Declutter Droid,' cheerfully sorting a stack of digital mail envelopes. The robot is sleek, modern, and primarily white and blue. Some envelopes have generic logos (like a food delivery app or a shopping cart) and are being placed into a 'Marketing' folder, while others, marked with a simple star, are kept in a 'Primary' inbox. The style should be a clean, vector illustration with a light, tech-themed background."
+
+**Option 2 (Abstract Concept):**
+"A digital art illustration showing a chaotic stream of email icons (unopened letters, promotional tags) flowing in from one side and being neatly organized into clean, stacked rows on the other side by a glowing, intelligent blue orb representing an AI. The overall aesthetic is clean, modern, and uses a palette of blue, white, and grey to convey a sense of calm and order."
+
+**Option 3 (Direct & Simple):**
+"A minimalist and modern logo for 'Declutter Droid.' The logo features a stylized robot head combined with a mail envelope. The robot's eye is a glowing blue dot, and a subtle checkmark is integrated into the envelope flap, symbolizing a cleaned inbox. The text 'Declutter Droid' is positioned neatly below the logo in a clean, sans-serif font."
