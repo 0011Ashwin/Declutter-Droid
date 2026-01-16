@@ -241,6 +241,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### ⭐ Star this repo if you found it helpful!
 
-Made with ❤️ for the **Hackathon 2026**
+Made by Ashwin  Mehta **Droidrun DevSprint 2026**
 
 </div>
