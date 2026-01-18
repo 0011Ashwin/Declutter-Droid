@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 def check_api_key():
     # Load environment variables from .env file
     load_dotenv()
-    
+    # Define the expected API key variable.
     api_key = os.environ.get("GEMINI_API_KEY")
     
     print("-" * 30)
