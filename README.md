@@ -138,22 +138,32 @@ python main.py
   <img src="workflow-drodirun.jpg" alt="Workflow Diagram" width="700"/>
 </div>
 
+A mermaid diagram will only render on GitHub if the code block starts with '```mermaid' and the first line inside is 'graph TD' (no indentation). Fixing this:
 ```mermaid
-  A[Capture Screen] --> B[Gemini Vision Analysis]
-  B --> C{Is it Spam?}
-
-  C -->|No| D[Ignore / Scroll]
-  D --> A
-
-  C -->|Yes| E[Action: Tap & Open Email]
-  E --> F[Blind Scroll to Footer x4]
-
-  F --> G[Vision Search: Find Unsubscribe Link]
-  G --> H[Action: Click Link]
-
-  H --> I[Opens Chrome Browser]
-  I --> J[Vision Search: Find Confirm Button]
-  J --> K[Action: Click Confirm & Unsubscribe]
+graph TD
+A[Capture Screen] --> B[Gemini Vision Analysis]
+B --> C{Is it Spam?}
+C -->|No| D[Ignore / Scroll]
+D --> A
+C -->|Yes| E[Action: Tap & Open Email]
+E --> F[Blind Scroll to Footer x4]
+F --> G[Vision Search: Find Unsubscribe Link]
+G --> H[Action: Click Link]
+H --> I[Opens Chrome Browser]
+I --> J[Vision Search: Find Confirm Button]
+J --> K[Action: Click Confirm & Unsubscribe]
+```
+A[Capture Screen] --> B[Gemini Vision Analysis]
+B --> C{Is it Spam?}
+C -->|No| D[Ignore / Scroll]
+D --> A
+C -->|Yes| E[Action: Tap & Open Email]
+E --> F[Blind Scroll to Footer x4]
+F --> G[Vision Search: Find Unsubscribe Link]
+G --> H[Action: Click Link]
+H --> I[Opens Chrome Browser]
+I --> J[Vision Search: Find Confirm Button]
+J --> K[Action: Click Confirm & Unsubscribe]
 ```
 
 ### Architecture Overview
