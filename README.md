@@ -60,67 +60,119 @@ Runs locally on your device via ADB; no personal data is stored on external serv
 The agent follows a human-like cognitive workflow to clean the inbox:
 
 graph TD
-  A[📸 Capture Screen] --> B[🧠 AI Vision Analysis]
-  B --> C{Is it Spam?}
-  
-  C -->|No| D[⬇️ Ignore / Scroll]
-  D --> A
-  
-  C -->|Yes| E[👆 Action: Tap & Open Email]
-  E --> F[📉 Blind Scroll to Footer x4]
-  
-  F --> G[🔍 Vision Search: Find Unsubscribe Link]
-  G --> H[🔗 Action: Click Link]
-  
-  H --> I[🌐 Opens Chrome Browser]
-  I --> J[🧠 Vision Search: Find Confirm Button]
-  J --> K[✅ Action: Click Confirm & Unsubscribe]
+A[Capture Screen] --> B[Gemini Vision Analysis]
+B --> C{Is it Spam?}
+C -->|No| D[Ignore / Scroll]
+D --> A
+C -->|Yes| E[Action: Tap & Open Email]
+E --> F[Blind Scroll to Footer x4]
+F --> G[Vision Search: Find Unsubscribe Link]
+G --> H[Action: Click Link]
+H --> I[Opens Chrome Browser]
+I --> J[Vision Search: Find Confirm Button]
+J --> K[Action: Click Confirm & Unsubscribe]
+```
+```
 
 
-🏗️ Architecture
+---
+## 🏗️ Architecture Overview
 
-Component
+| Component         | File         | Purpose                                         |
+|-------------------|--------------|-------------------------------------------------|
+| **Main Agent**    | `main.py`    | Core logic and workflow orchestration            |
+| **AI Prompts**    | `prompts.py` | Structured prompts for Gemini/Groq vision        |
+| **ADB Utilities** | `utils.py`   | Android device interaction helpers               |
+| **Config**        | `.env`       | API keys and environment configuration           |
 
-Technology
+---
+## 📁 Project Structure
 
-Purpose
+| Path                | Description                       |
+|---------------------|-----------------------------------|
+| `main.py`           | Main agent script                 |
+| `prompts.py`        | AI prompt configurations          |
+| `utils.py`          | ADB utility functions             |
+| `requirements.txt`  | Python dependencies               |
+| `.env`              | Environment variables (create this)|
+| `Agent-output/`     | Debug screenshots                 |
+| `README.md`         | Project documentation             |
 
-The Brain
+---
+## 🎯 Targeted Email Sources
 
-Google Gemini 2.0 Flash
+| Category                | Brands                        |
+|-------------------------|-------------------------------|
+| 🍕 **Food Delivery**    | Zomato, Swiggy                |
+| 🛒 **E-Commerce**       | Flipkart                      |
+| 📚 **Education**        | Coursera                      |
+| 💼 **Social/Professional** | Facebook, LinkedIn         |
 
-Decides what is on the screen and where to click.
+---
+## 🛠️ Troubleshooting
 
-The Eyes
+| Issue                    | Solution                                         |
+|--------------------------|--------------------------------------------------|
+| `GEMINI_API_KEY missing!`| Ensure `.env` file exists with valid API key     |
+| `No devices found`       | Enable USB Debugging and reconnect device        |
+| `ADB Error`              | Restart ADB server: `adb kill-server && adb start-server` |
+| `Rate limit (429)`       | Wait a few seconds; the agent auto-retries       |
 
-Groq Llama 4 Scout
+---
+## 🤝 Contributing
 
-Rapid UI object detection (buttons, menus, links).
+| Step | Action                                                      |
+|------|-------------------------------------------------------------|
+|  1   | 🍴 Fork the repository                                      |
+|  2   | 🌿 Create a feature branch (`git checkout -b feature/amazing-feature`) |
+|  3   | 💾 Commit changes (`git commit -m 'Add amazing feature'`)   |
+|  4   | 📤 Push to branch (`git push origin feature/amazing-feature`)|
+|  5   | 🔃 Open a Pull Request                                      |
 
-The Hands
+---
+## 📜 License
 
-ADB (Android Debug Bridge)
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
-Executes physical taps, swipes, and text input.
+---
+## 👨‍💻 Author
 
-The Logic
+<div align="center">
 
-Python 3.11
+**Ashwin**
 
-Orchestrates the agent loop and error handling.
+[![GitHub](https://img.shields.io/badge/GitHub-0011Ashwin-181717?style=for-the-badge&logo=github)](https://github.com/0011Ashwin)
 
-🚀 Installation
+</div>
 
-1️⃣ Clone the Repository
+---
+<div align="center">
 
-git clone [https://github.com/0011Ashwin/Declutter-Droid.git](https://github.com/0011Ashwin/Declutter-Droid.git)
+### ⭐ Star this repo if you found it helpful!
+
+Made by Ashwin Mehta **Droidrun DevSprint 2026**
+
+</div>
+
+---
+
+## 🚀 Installation
+
+```bash
+# Clone repository
+git clone https://github.com/0011Ashwin/Declutter-Droid.git
 cd Declutter-Droid
 
+# Create virtual environment
+python -m venv env
+.\env\Scripts\activate  # Windows
+source env/bin/activate  # macOS/Linux
 
-2️⃣ Install Dependencies
-
+# Install dependencies
 pip install -r requirements.txt
+```
 
+---
 
 3️⃣ Configure API Keys
 
