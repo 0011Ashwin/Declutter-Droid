@@ -209,50 +209,6 @@ J --> K[Action: Click Confirm & Unsubscribe]
 |  3   | 💾 Commit changes (`git commit -m 'Add amazing feature'`)   |
 |  4   | 📤 Push to branch (`git push origin feature/amazing-feature`)|
 |  5   | 🔃 Open a Pull Request                                      |
-
----
-## 📜 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-## 👨‍💻 Author
-
-<div align="center">
-
-**Ashwin**
-
-[![GitHub](https://img.shields.io/badge/GitHub-0011Ashwin-181717?style=for-the-badge&logo=github)](https://github.com/0011Ashwin)
-
-</div>
-
----
-<div align="center">
-
-### ⭐ Star this repo if you found it helpful!
-
-Made by Ashwin Mehta **Droidrun DevSprint 2026**
-
-</div>
-
----
-
-## 🚀 Installation
-
-```bash
-# Clone repository
-git clone https://github.com/0011Ashwin/Declutter-Droid.git
-cd Declutter-Droid
-
-# Create virtual environment
-python -m venv env
-.\env\Scripts\activate  # Windows
-source env/bin/activate  # macOS/Linux
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
 ---
 
 ## ⚙️ Configuration
