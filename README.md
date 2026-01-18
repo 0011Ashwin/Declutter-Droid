@@ -138,7 +138,7 @@ python main.py
   <img src="workflow-drodirun.jpg" alt="Workflow Diagram" width="700"/>
 </div>
 
-```graph TD
+```mermaid
   A[📸 Capture Screen] --> B[🧠 Gemini Vision Analysis]
   B --> C{Is it Spam?}
   
