@@ -14,6 +14,12 @@ It navigates the Gmail app on Android via ADB, identifies marketing emails, find
 
 ---
 
+## 💡 The "Agentic" Advantage
+
+**For now, we know Google integrated Gemini into Gmail and Docs for content creation, but it still requires instruction and prompts. Declutter Droid is different—it is an autonomous agent that can perform the cleanup itself, proactively managing your digital space without constant supervision.**
+
+---
+
 ## ✨ Features
 
 - **🧠 Dual-Core Vision Intelligence**  
