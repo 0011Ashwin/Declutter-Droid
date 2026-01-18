@@ -30,3 +30,15 @@ def input_swipe(device, x1, y1, x2, y2, duration_ms):
 def input_text(device, text):
     safe_text = text.replace(" ", "%s") 
     device.shell(f"input text '{safe_text}'")
+
+def press_back(device):
+    """Press the Android back button."""
+    device.shell("input keyevent KEYCODE_BACK")
+
+def press_home(device):
+    """Press the Android home button."""
+    device.shell("input keyevent KEYCODE_HOME")
+
+def press_recent(device):
+    """Press the Android recent apps button."""
+    device.shell("input keyevent KEYCODE_APP_SWITCH")
