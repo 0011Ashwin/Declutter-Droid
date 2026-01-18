@@ -155,90 +155,67 @@ J --> K[Action: Click Confirm & Unsubscribe]
 ```
 ```
 
-### Architecture Overview
-
-| Component | File | Purpose |
-|-----------|------|---------|
-| **Main Agent** | `main.py` | Core logic and workflow orchestration |
-| **AI Prompts** | `prompts.py` | Structured prompts for Gemini/Groq vision analysis |
-| **ADB Utilities** | `utils.py` | Android device interaction helpers |
-| **Config** | `.env` | API keys and environment configuration |
 
 ---
+## 🏗️ Architecture Overview
 
-## 🛠️ Tech Stack
-
-<div align="center">
-
-| Technology | Purpose |
-|------------|---------|
-| ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) | Core Programming Language |
-| ![Gemini](https://img.shields.io/badge/Gemini_2.0_Flash-4285F4?style=flat&logo=google&logoColor=white) | AI Vision & Decision Making |
-| ![Groq](https://img.shields.io/badge/Groq_Llama_4-orange?style=flat&logo=groq&logoColor=white) | Advanced Vision Model |
-| ![ADB](https://img.shields.io/badge/ADB-3DDC84?style=flat&logo=android&logoColor=white) | Android Device Control |
-| ![PIL](https://img.shields.io/badge/Pillow-FFD43B?style=flat&logo=python&logoColor=black) | Image Processing |
-
-</div>
+| Component         | File         | Purpose                                         |
+|-------------------|--------------|-------------------------------------------------|
+| **Main Agent**    | `main.py`    | Core logic and workflow orchestration            |
+| **AI Prompts**    | `prompts.py` | Structured prompts for Gemini/Groq vision        |
+| **ADB Utilities** | `utils.py`   | Android device interaction helpers               |
+| **Config**        | `.env`       | API keys and environment configuration           |
 
 ---
-
 ## 📁 Project Structure
 
-```
-Declutter-Droid/
-├── main.py           # Main agent script
-├── prompts.py        # AI prompt configurations
-├── utils.py          # ADB utility functions
-├── requirements.txt  # Python dependencies
-├── .env              # Environment variables (create this)
-├── Agent-output/     # Debug screenshots
-└── README.md         # You are here!
-```
+| Path                | Description                       |
+|---------------------|-----------------------------------|
+| `main.py`           | Main agent script                 |
+| `prompts.py`        | AI prompt configurations          |
+| `utils.py`          | ADB utility functions             |
+| `requirements.txt`  | Python dependencies               |
+| `.env`              | Environment variables (create this)|
+| `Agent-output/`     | Debug screenshots                 |
+| `README.md`         | Project documentation             |
 
 ---
-
 ## 🎯 Targeted Email Sources
 
-The AI is trained to prioritize and identify emails from:
-
-| Category | Brands |
-|----------|--------|
-| 🍕 **Food Delivery** | Zomato, Swiggy |
-| 🛒 **E-Commerce** | Flipkart |
-| 📚 **Education** | Coursera |
-| 💼 **Social/Professional** | Facebook, LinkedIn |
+| Category                | Brands                        |
+|-------------------------|-------------------------------|
+| 🍕 **Food Delivery**    | Zomato, Swiggy                |
+| 🛒 **E-Commerce**       | Flipkart                      |
+| 📚 **Education**        | Coursera                      |
+| 💼 **Social/Professional** | Facebook, LinkedIn         |
 
 ---
+## 🛠️ Troubleshooting
 
-## 🔧 Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| `GEMINI_API_KEY missing!` | Ensure `.env` file exists with valid API key |
-| `No devices found` | Enable USB Debugging and reconnect device |
-| `ADB Error` | Restart ADB server: `adb kill-server && adb start-server` |
-| `Rate limit (429)` | Wait a few seconds; the agent auto-retries |
+| Issue                    | Solution                                         |
+|--------------------------|--------------------------------------------------|
+| `GEMINI_API_KEY missing!`| Ensure `.env` file exists with valid API key     |
+| `No devices found`       | Enable USB Debugging and reconnect device        |
+| `ADB Error`              | Restart ADB server: `adb kill-server && adb start-server` |
+| `Rate limit (429)`       | Wait a few seconds; the agent auto-retries       |
 
 ---
-
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to:
-
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. 💾 Commit changes (`git commit -m 'Add amazing feature'`)
-4. 📤 Push to branch (`git push origin feature/amazing-feature`)
-5. 🔃 Open a Pull Request
+| Step | Action                                                      |
+|------|-------------------------------------------------------------|
+|  1   | 🍴 Fork the repository                                      |
+|  2   | 🌿 Create a feature branch (`git checkout -b feature/amazing-feature`) |
+|  3   | 💾 Commit changes (`git commit -m 'Add amazing feature'`)   |
+|  4   | 📤 Push to branch (`git push origin feature/amazing-feature`)|
+|  5   | 🔃 Open a Pull Request                                      |
 
 ---
-
 ## 📜 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
-
 ## 👨‍💻 Author
 
 <div align="center">
@@ -250,21 +227,13 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 </div>
 
 ---
-
 <div align="center">
 
 ### ⭐ Star this repo if you found it helpful!
 
-Made by Ashwin  Mehta **Droidrun DevSprint 2026**
+Made by Ashwin Mehta **Droidrun DevSprint 2026**
 
 </div>
-
-- Python 3.9+
-- Android device with USB Debugging enabled
-- ADB installed and configured
-- API Keys:
-  - [Groq API Key](https://console.groq.com/keys) (recommended)
-  - [Gemini API Key](https://ai.google.dev/) (optional fallback)
 
 ---
 
