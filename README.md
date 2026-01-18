@@ -1,250 +1,141 @@
-<div align="center">
+# 🧹 Declutter Droid - AI-Powered Digital Janitor
 
-🤖 Declutter Droid
+![Declutter Droid Banner](Declutter-droid.png)
 
-The Autonomous Digital Janitor for Android
+> **"Your messy inbox, cleaned by an AI agent that actually sees what it's doing."**
 
-<img src="Declutter-droid.png" alt="Droid AI Janitor" width="600"/>
+---
 
-Declutter Droid is an intelligent AI agent that achieves Inbox Zero by physically unsubscribing you from spam. Unlike standard filters that just label emails, this agent visually navigates your Android phone, finds hidden "Unsubscribe" links, and manages browser confirmations just like a human would.
+## 🚀 Overview
 
-Features •
-Demo •
-How It Works •
-Installation •
-Usage •
-Tech Stack
+**Declutter Droid** is an intelligent automation agent built for the hackathon that autonomously cleans up your digital life. Unlike traditional automation scripts that rely on fragile, hardcoded coordinates, Declutter Droid uses **Vision LLMs (Llama 4 Scout & Gemini 2.0 Flash)** to "see" your screen and interact with apps just like a human would.
 
-</div>
+It navigates the Gmail app on Android via ADB, identifies marketing emails, finds those tricky "Unsubscribe" links buried in footers, and handles confirmation pop-ups—all without you lifting a finger.
 
-🌟 Features
+---
 
-Feature
+## ✨ Features
 
-Description
+- **🧠 Dual-Core Vision Intelligence**  
+  Powered by **Groq Llama 4 Scout** (primary vision) and **Google Gemini 2.0 Flash** (fallback), ensuring high-accuracy detection of UI elements.
 
-🧹 Digital Janitor
+- **👁️ True Visual Navigation**  
+  No hardcoded XY coordinates. The agent analyzes screenshots in real-time to find buttons, menus, and links dynamically. It adapts to different screen sizes and UI updates automatically.
 
-actively removes spam by clicking "Unsubscribe" links, not just hiding them.
+- **🛡️ Smart Unsubscribe**  
+  Intelligently hunts for "Unsubscribe," "Opt-out," and "Manage Preferences" links, even when hidden in tiny footer text.
 
-🧠 Hybrid Vision Intelligence
+- **📱 Non-Intrusive Android Automation**  
+  Runs on your local machine and controls your Android device via ADB, ensuring your data stays on your device until analyzed.
 
-Uses Gemini 2.0 Flash for reasoning and Groq Llama 4 Scout for high-speed UI element detection.
+---
 
-📱 True Agentic Workflow
+## 🛠️ How It Works
 
-Navigates across apps (Gmail → Chrome → System UI) maintaining context throughout the task.
+Declutter Droid follows a "See-Think-Act" loop:
 
-📉 Smart API Usage
-
-Implements "Blind Scrolling" algorithms to navigate long emails without burning API credits.
-
-🎯 Multi-Brand Support
-
-Trained to detect marketing patterns from Zomato, Swiggy, Flipkart, Coursera, LinkedIn, and more.
-
-🛡️ Privacy First
-
-Runs locally on your device via ADB; no personal data is stored on external servers.
-
-🎬 Demo
-
-<div align="center">
-<img src="demon_of_terminal.png" alt="Terminal Output Demo" width="700"/>
-</div>
-
-🎥 Watch the Full Demo Video on YouTube
-
-⚙️ How It Works
-
-The agent follows a human-like cognitive workflow to clean the inbox:
-
+```mermaid
 graph TD
-A[Capture Screen] --> B[Gemini Vision Analysis]
-B --> C{Is it Spam?}
-C -->|No| D[Ignore / Scroll]
-D --> A
-C -->|Yes| E[Action: Tap & Open Email]
-E --> F[Blind Scroll to Footer x4]
-F --> G[Vision Search: Find Unsubscribe Link]
-G --> H[Action: Click Link]
-H --> I[Opens Chrome Browser]
-I --> J[Vision Search: Find Confirm Button]
-J --> K[Action: Click Confirm & Unsubscribe]
+    A[Start Agent] --> B{ADB Connected?}
+    B -- No --> C[Error: Connect Device]
+    B -- Yes --> D[Launch Gmail]
+    D --> E[Capture Screenshot]
+    E --> F[AI Analysis]
+    
+    subgraph "AI Brain (Groq/Gemini)"
+    F --> G{What is on screen?}
+    G -- "Inbox" --> H[Find Promo Email]
+    G -- "Email Open" --> I[Find Unsubscribe Link]
+    G -- "Browser" --> J[Find Confirm Button]
+    end
+    
+    H --> K[Action: Tap Email]
+    I --> L[Action: Tap Unsubscribe]
+    J --> M[Action: Tap Confirm]
+    
+    K --> E
+    L --> E
+    M --> N[Return to Inbox]
+    N --> E
 ```
-```
 
-
----
-## 🏗️ Architecture Overview
-
-| Component         | File         | Purpose                                         |
-|-------------------|--------------|-------------------------------------------------|
-| **Main Agent**    | `main.py`    | Core logic and workflow orchestration            |
-| **AI Prompts**    | `prompts.py` | Structured prompts for Gemini/Groq vision        |
-| **ADB Utilities** | `utils.py`   | Android device interaction helpers               |
-| **Config**        | `.env`       | API keys and environment configuration           |
-
----
-## 📁 Project Structure
-
-| Path                | Description                       |
-|---------------------|-----------------------------------|
-| `main.py`           | Main agent script                 |
-| `prompts.py`        | AI prompt configurations          |
-| `utils.py`          | ADB utility functions             |
-| `requirements.txt`  | Python dependencies               |
-| `.env`              | Environment variables (create this)|
-| `Agent-output/`     | Debug screenshots                 |
-| `README.md`         | Project documentation             |
-
----
-## 🎯 Targeted Email Sources
-
-| Category                | Brands                        |
-|-------------------------|-------------------------------|
-| 🍕 **Food Delivery**    | Zomato, Swiggy                |
-| 🛒 **E-Commerce**       | Flipkart                      |
-| 📚 **Education**        | Coursera                      |
-| 💼 **Social/Professional** | Facebook, LinkedIn         |
-
----
-## 🛠️ Troubleshooting
-
-| Issue                    | Solution                                         |
-|--------------------------|--------------------------------------------------|
-| `GEMINI_API_KEY missing!`| Ensure `.env` file exists with valid API key     |
-| `No devices found`       | Enable USB Debugging and reconnect device        |
-| `ADB Error`              | Restart ADB server: `adb kill-server && adb start-server` |
-| `Rate limit (429)`       | Wait a few seconds; the agent auto-retries       |
-
----
-## 🤝 Contributing
-
-| Step | Action                                                      |
-|------|-------------------------------------------------------------|
-|  1   | 🍴 Fork the repository                                      |
-|  2   | 🌿 Create a feature branch (`git checkout -b feature/amazing-feature`) |
-|  3   | 💾 Commit changes (`git commit -m 'Add amazing feature'`)   |
-|  4   | 📤 Push to branch (`git push origin feature/amazing-feature`)|
-|  5   | 🔃 Open a Pull Request                                      |
-
----
-## 📜 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-## 👨‍💻 Author
-
-<div align="center">
-
-**Ashwin**
-
-[![GitHub](https://img.shields.io/badge/GitHub-0011Ashwin-181717?style=for-the-badge&logo=github)](https://github.com/0011Ashwin)
-
-</div>
-
----
-<div align="center">
-
-### ⭐ Star this repo if you found it helpful!
-
-Made by Ashwin Mehta **Droidrun DevSprint 2026**
-
-</div>
+### Visual Workflow
+![Project Workflow](workflow-drodirun.jpg)
 
 ---
 
-## 🚀 Installation
+## 📸 Demo in Action
 
+The agent runs directly in your terminal, providing real-time "thoughts" on what it sees and does.
+
+![Terminal Demo](demon_of_terminal.png)
+
+🎬 [**Watch the Demo on YouTube**](https://youtube.com/shorts/jEt8TJ-FN7o?si=TajA1X6T_oXw6A7i)
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+- **Python 3.10+**
+- **ADB (Android Debug Bridge)** installed and added to PATH.
+- **Android Device** with USB Debugging enabled.
+
+### 1. Clone the Repository
 ```bash
-# Clone repository
-git clone https://github.com/0011Ashwin/Declutter-Droid.git
-cd Declutter-Droid
+git clone https://github.com/yourusername/declutter-droid.git
+cd declutter-droid
+```
 
+### 2. Set Up Environment
+```bash
 # Create virtual environment
 python -m venv env
-.\env\Scripts\activate  # Windows
-source env/bin/activate  # macOS/Linux
+
+# Activate it
+source env/bin/activate  # Windows: env\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
+### 3. Configure API Keys
+Create a `.env` file in the root directory:
+```env
+GEMINI_API_KEY=your_gemini_key_here
+GROQ_API_KEY=your_groq_key_here
+```
+
 ---
 
-3️⃣ Configure API Keys
+## 🎮 Usage
 
-Create a .env file in the project root:
+Connect your Android phone via USB and run the agent:
 
-GEMINI_API_KEY=your_gemini_api_key_here
-GROQ_API_KEY=your_groq_api_key_here
-
-
-4️⃣ Connect Your Android Device
-
-Enable USB Debugging on your phone and connect via USB.
-
-adb devices
-# Output should show: List of devices attached -> XXXXX device
-
-
-💡 Usage
-
-Run the agent in one of two modes:
-
-Quick Demo Mode (Processes 3 emails)
-
+### ⚡ Quick Demo (Processes 3 emails)
+```bash
 python main.py demo
+```
 
-
-Full Clean Mode (Deep cleaning of Promotions folder)
-
+### 🧹 Full Clean (Processes 5+ emails)
+```bash
 python main.py full
+```
 
+---
 
-📁 Project Structure
+## 🏗️ Tech Stack
 
-Declutter-Droid/
-├── main.py           # 🧠 Core Agent Logic & Router
-├── prompts.py        # 🗣️ AI System Instructions
-├── utils.py          # 🛠️ ADB Helper Functions
-├── requirements.txt  # 📦 Dependencies
-├── .env              # 🔑 API Credentials
-└── Agent-output/     # 📸 Debug Screenshots
+- **Core**: Python
+- **AI/Vision**: Groq (Llama 4 Scout), Google Gemini 2.0 Flash
+- **Control**: ADB (Android Debug Bridge), pure-python-adb
+- **Image Processing**: PIL (Pillow)
 
+---
 
-🔧 Troubleshooting
+## 👨‍💻 Contributors
 
-Issue
+Built with ❤️ for the Hackathon.
 
-Solution
-
-GEMINI_API_KEY missing!
-
-Ensure your .env file is created and saved correctly.
-
-No devices found
-
-Reconnect USB cable and verify USB Debugging is ON.
-
-Rate limit (429)
-
-The agent has built-in retry logic. Wait 30s and it will resume.
-
-Unsubscribe not found
-
-Some emails use images instead of text links. The agent will skip these safely.
-
-📜 License
-
-This project is licensed under the MIT License — see the LICENSE file for details.
-
-<div align="center">
-
-Built by Ashwin
-
-🚀 Droidrun DevSprint 2026 • Track: B2C Productivity
-
-</div>
+---
+*Note: This project is a proof-of-concept prototype. Always review what the agent is unsubscribing from.*
