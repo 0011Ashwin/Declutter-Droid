@@ -2,3 +2,6 @@ droidrun[google]
 llama-index-llms-google-genai
 google-generativeai
 adbutils
+groq
+python-dotenv
+pillow
