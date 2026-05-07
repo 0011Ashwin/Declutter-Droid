@@ -309,7 +309,7 @@ def ask_groq_vision(pil_image, prompt, model=None):
             logger.info("🔄 Trying backup model...")
             return ask_groq_vision(pil_image, prompt, GROQ_VISION_BACKUP)
         return None
-
+# gemini vision control
 # ============================================
 # GEMINI VISION API
 # ============================================
