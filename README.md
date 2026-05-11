@@ -141,7 +141,7 @@ python main.py full
 
 ## 👨‍💻 Contributors
 
-Built with ❤️ for the Hackathon.
+Built by developer Ashwin Mehta
 
 ---
 *Note: This project is a proof-of-concept prototype. Always review what the agent is unsubscribing from.*
