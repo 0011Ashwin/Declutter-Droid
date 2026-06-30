@@ -4,7 +4,7 @@
 # Pure AI Vision - No Hardcoded Fallbacks
 # Gemini + Groq Llama 4 Scout Vision
 # ============================================
-
+import numoy
 import os
 import io
 import time
