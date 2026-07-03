@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-
+import numpy as np
 def check_api_key():
     # Load environment variables from .env file
     load_dotenv()
