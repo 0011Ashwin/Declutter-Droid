@@ -3,6 +3,7 @@
 ![Declutter Droid Banner](Declutter-droid.png)
 
 > **"Your messy inbox, cleaned by an AI agent that actually sees what it's doing."**
+banner agent 
 
 ---
 
