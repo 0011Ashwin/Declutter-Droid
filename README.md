@@ -135,8 +135,9 @@ python main.py full
 
 - **Core**: Python
 - **AI/Vision**: Groq (Llama 4 Scout), Google Gemini 2.0 Flash
-- **Control**: ADB (Android Debug Bridge), pure-python-adb
+- **Control**: ADB (Android Debug Bridge), pure-python-adb / adbutils
 - **Image Processing**: PIL (Pillow)
+- **Architecture Documentation**: See [TECH_STACK.md](TECH_STACK.md) for a comprehensive deep dive into system architecture, control flow, and AI vision routing.
 
 ---
 
