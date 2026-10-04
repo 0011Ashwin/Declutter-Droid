@@ -139,7 +139,7 @@ python main.py full
 - **Image Processing**: PIL (Pillow)
 - **Architecture Documentation**: See [TECH_STACK.md](TECH_STACK.md) for a comprehensive deep dive into system architecture, control flow, and AI vision routing.
 
----
+----
 
 ## 👨‍💻 Contributors
 
