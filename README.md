@@ -11,7 +11,7 @@ banner agent what
 
 **Declutter Droid** is an intelligent automation agent built for the hackathon that autonomously cleans up your digital life. Unlike traditional automation agent  scripts that rely on fragile, hardcoded coordinates, Declutter Droid uses **Vision LLMs (Llama 4 Scout & Gemini 2.0 Flash)** to "see" your screen and interact with apps just like a human would.
 
-It navigates the Gmail app on Android via ADB, identifies marketing emails, finds those tricky "Unsubscribe" links buried in footers, and handles confirmation pop-ups—all without you lifting a finger
+It navigates the Gmail app on Android via ADB, identifies marketing emails, finds those tricky "Unsubscribe" links buried in footers, and handles confirmation pop-ups—all without you lifting a finger prin
 
 ---
 
