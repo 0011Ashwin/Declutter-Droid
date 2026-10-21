@@ -4,7 +4,7 @@ i# 🧹 Declutter Droid - AI-Powered Digital Janitor
 
 > **"Your messy inbox, cleaned by an AI agent that actually sees what it's doing."**
 banner agent
-
+--
 ---
 
 ## 🚀 Overview
